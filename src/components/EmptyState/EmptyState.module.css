@@ -1,0 +1,26 @@
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-4xl) var(--space-xl);
+  gap: var(--space-md);
+}
+
+.icon { font-size: 4rem; line-height: 1; }
+
+.title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.message {
+  font-size: var(--font-size-md);
+  color: var(--color-text-secondary);
+  max-width: 400px;
+  line-height: 1.6;
+}
+
+.actions { margin-top: var(--space-sm); display: flex; gap: var(--space-md); flex-wrap: wrap; justify-content: center; }

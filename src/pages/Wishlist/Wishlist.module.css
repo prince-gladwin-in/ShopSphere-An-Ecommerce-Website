@@ -1,0 +1,83 @@
+.page { padding: var(--space-xl) 0 var(--space-4xl); }
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: var(--space-xl);
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.title {
+  font-size: var(--font-size-3xl);
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-muted);
+  margin-top: var(--space-xs);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+  gap: var(--space-lg);
+}
+
+/* Wish card */
+.wishCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cardImg {
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 1;
+  background: var(--color-surface-alt);
+  flex-shrink: 0;
+}
+.cardImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+.wishCard:hover .cardImg img { transform: scale(1.05); }
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: var(--space-md);
+  flex: 1;
+}
+
+.cardTitle {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  text-decoration: none;
+  line-height: 1.4;
+  transition: color var(--transition-fast);
+}
+.cardTitle:hover { color: var(--color-primary); }
+
+.priceRow { display: flex; align-items: baseline; gap: 8px; margin-top: auto; }
+.price    { font-size: var(--font-size-lg); font-weight: 800; color: var(--color-text); }
+.original { font-size: var(--font-size-sm); color: var(--color-muted); text-decoration: line-through; }
+
+.cardActions { display: flex; gap: var(--space-sm); margin-top: var(--space-sm); }
+.cardActions .btn { flex: 1; }
+
+@media (max-width: 480px) {
+  .grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-md); }
+}
+
+@media (max-width: 340px) {
+  .grid { grid-template-columns: 1fr; }
+}

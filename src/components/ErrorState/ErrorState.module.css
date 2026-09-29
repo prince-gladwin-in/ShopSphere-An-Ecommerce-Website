@@ -1,0 +1,13 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-4xl) var(--space-xl);
+  gap: var(--space-md);
+}
+
+.icon   { font-size: 4rem; }
+.title  { font-size: var(--font-size-2xl); font-weight: 700; color: var(--color-danger); }
+.message { font-size: var(--font-size-md); color: var(--color-text-secondary); max-width: 420px; line-height: 1.6; }
